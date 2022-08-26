@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #4b71319c;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.music {
+  position: relative;
+  background: #4b9caa;
+  width: 25rem;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 70vh;
+    // overflow: hidden;
+}
+
+// Music Player Div
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .fas,
+  .fa-solid {
+    font-size: 1.4rem;
+  }
+
+  .fa-solid {
+    cursor: pointer;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+
+// musicDetails Div
+
+.musicDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.4rem 0;
+
+  img {
+    width: 80%;
+    box-shadow: 10px 16px 30px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    color: rgb(255, 235, 209);
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  p[class="musicArtist"] {
+    color: rebeccapurple;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 6px;
+  }
+}
+
+//  Music controls
+
+.musicControls {
+  background: rgb(169, 121, 123);
+  padding: 2rem 1rem;
+  border-radius: 20px;
+
+  .songDuration {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 0 0.2rem;
+  }
+
+  // Range Slider
+  .slider {
+    input[type="range"] {
+      display: flex;
+      width: 80%;
+      height: 4px;
+      margin: 18px auto;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+// Buttons
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: whitesmoke;
+
+  .play {
+    margin: 0 25px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+    padding: 8px 12px;
+    border-radius: 50%;
+  }
+
+  .backward,
+  .forward {
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+.playALl {
+  display: block;
+  margin: 19px auto;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+
+  i {
+    margin-left: 10px;
+  }
+}
+
+// volume
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .showVolume {
+    margin-right: 8px;
+    background: black;
+    color: white;
+    padding: 3px;
+    border-radius: 30%;
+  }
+
+  .fas {
+    margin-right: 10px;
+  }
+
+  input[type="range"] {
+    width: 50%;
+    height: 4px;
+    cursor: pointer;
+  }
+}
+
+// musicPlayList
+
+.musicPlayList {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transform: translateX(-100%);
+  transition: all 0.8s;
+}
+
+.playlistHeader {
+  color: whitesmoke;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+
+  .fa-solid {
+    cursor: pointer;
+  }
+}
+
+.musicList {
+  width: 100%;
+  color: white;
+  height: 80vh;
+  overflow-y: auto;
+
+  .musicItem {
+    display: flex;
+
+    align-items: center;
+
+    .songIndex {
+      font-size: 1.4rem;
+      margin-right: 8px;
+    }
+
+    .songName {
+      width: 90%;
+      font-style: 1.4rem;
+      border-bottom: 1px solid white;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+  }
+}
