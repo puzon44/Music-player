@@ -16,40 +16,40 @@
             <div class="header">
               <i class="fas fa-music"></i>
               <h2 class="text">Currently Playing</h2>
-              <i class="fa-solid fa-list-check"></i>
+              <i class="fa-solid fa-list-check" id="hamBurger"></i>
             </div>
           </div>
         </nav>
         <!-- Music Details -->
         <div class="musicDetails">
-          <img src="image/main.jpg" alt="Bgimage"/>
-          <p class="musicInfo">Song Title</p>
-          <p class="musicArtist">Artist Name</p>
+          <img src="image/main.jpg" alt="Bgimage" id="changeImage" />
+          <p class="musicInfo" id="songTitle">Song Title</p>
+          <p class="musicArtist" id="singerName">Artist Name</p>
         </div>
 
         <!-- Music controls -->
         <div class="musicControls">
           <div class="songDuration">
-            <span class="currentDuration">00:00</span>
+            <span class="curntTime">00:00</span>
             <span class="currentDuration">04:12</span>
           </div>
           <!-- Music Duration Range -->
           <div class="slider">
-            <input type="range" class="duration" min="0" max="100" value="0" />
+            <input type="range" class="duration" min="0" value="0" max="100" />
           </div>
           <div class="button">
-            <i class="backward fa-solid fa-backward"></i>
-            <i class="play fa-solid fa-play"></i>
-            <i class="forward fa-solid fa-forward"></i>
+            <i class="fa-solid fa-backward" id="backward"></i>
+            <i class="fa-solid fa-play" id="playPause"></i>
+            <i class="fa-solid fa-forward" id="forward"></i>
           </div>
           <!-- AutoPlay -->
-          <button class="playALl">
-            Play All<i class="forward fa-solid fa-forward"></i>
+          <button class="playAll">
+            Play All<i class="fas fa-sync-alt"></i>
           </button>
 
           <!-- Volume Slider -->
           <div class="volume">
-            <p class="showVolume" id="volumeChange">50</p>
+            <p class="showVolume" id="volumeChange">30</p>
             <i class="fas fa-volume-up" id="volumeIcon"></i>
             <input
               type="range"
@@ -68,16 +68,16 @@
               <div class="header playlistHeader">
                 <i class="fas fa-music"></i>
                 <h2>Play List</h2>
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark" id="closeIcon"></i>
               </div>
             </div>
           </nav>
           <!-- Music Item -->
           <div class="musicList">
-            <div class="musicItem">
-              <span class="songIndex">1</span>
-              <p class="songName">Faded</p>
-            </div>
+            <!-- <div class="musicItem">
+              <span class="songIndex"></span>
+              <p class="songName"></p>
+            </div> -->
           </div>
         </div>
       </div>
@@ -87,5 +87,6 @@
     src="https://kit.fontawesome.com/eb80c64318.js"
     crossorigin="anonymous"
   ></script>
+  <script src="trackList.js"></script>
   <script src="script.js"></script>
 </html>

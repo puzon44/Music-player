@@ -25,7 +25,8 @@ body {
   width: 25rem;
   border-radius: 20px;
   padding: 2rem;
-  height: 70vh;
+  max-height: 70vh;
+  overflow: hidden;
 }
 
 .header {
@@ -51,13 +52,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.4rem 0;
+  margin: 0.4rem 0;
+  max-height: 20rem;
 }
 .musicDetails img {
-  width: 80%;
+  width: 62%;
   box-shadow: 10px 16px 30px rgb(0, 0, 0);
   border-radius: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 6px;
 }
 .musicDetails p {
   color: rgb(255, 235, 209);
@@ -74,9 +76,9 @@ body {
 }
 
 .musicControls {
-  background: rgb(169, 121, 123);
+  background: rgba(169, 121, 123, 0.4);
   padding: 2rem 1rem;
-  border-radius: 20px;
+  border-radius: 18px 18px 65px 65px;
 }
 .musicControls .songDuration {
   display: flex;
@@ -106,7 +108,7 @@ body {
   border-radius: 20px;
   background: whitesmoke;
 }
-.button .play {
+.button #playPause {
   margin: 0 25px;
   font-size: 30px;
   color: white;
@@ -115,20 +117,20 @@ body {
   padding: 8px 12px;
   border-radius: 50%;
 }
-.button .backward,
-.button .forward {
+.button #backward,
+.button #forward {
   font-size: 25px;
   cursor: pointer;
 }
 
-.playALl {
+.playAll {
   display: block;
   margin: 19px auto;
   padding: 8px;
   cursor: pointer;
   border-radius: 10px;
 }
-.playALl i {
+.playAll i {
   margin-left: 10px;
 }
 
@@ -141,11 +143,15 @@ body {
   margin-right: 8px;
   background: black;
   color: white;
-  padding: 3px;
+  padding: 4px;
   border-radius: 30%;
 }
 .volume .fas {
   margin-right: 10px;
+  background: rgb(227, 175, 79);
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .volume input[type=range] {
   width: 50%;
