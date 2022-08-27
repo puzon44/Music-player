@@ -21,12 +21,12 @@ body {
 
 .music {
   position: relative;
-  background: #4b9caa;
+  background: #ffffff;
   width: 25rem;
   border-radius: 20px;
   padding: 2rem;
   max-height: 70vh;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 // Music Player Div
@@ -70,7 +70,7 @@ body {
   }
 
   p {
-    color: rgb(255, 235, 209);
+    color: black;
     font-size: 1.3rem;
     font-weight: 400;
     text-decoration: underline;
@@ -88,13 +88,13 @@ body {
 //  Music controls
 
 .musicControls {
-  background: rgb(169, 121, 123,0.4);
+  background: rgb(169, 121, 123, 0.4);
   padding: 2rem 1rem;
   border-radius: 18px 18px 65px 65px;
 
   .songDuration {
     display: flex;
-    color: white;
+    color: black;
     justify-content: space-between;
     font-weight: bold;
     margin: 0 0.2rem;
@@ -234,4 +234,48 @@ body {
       cursor: pointer;
     }
   }
+}
+
+@media only screen and (max-width: 480px) {
+  .header h2 {
+    font-size: 1.2rem;
+  }
+  .header .fas,
+  .header .fa-solid {
+    font-size: 1.2rem;
+  }
+  .musicDetails img {
+    width: 46%;
+    margin-bottom: 12px;
+  }
+  .musicDetails {
+    max-height: 14rem;
+  }
+  .musicControls {
+    padding: 18px 1rem;
+  }
+  .button #backward,
+  .button #forward {
+    font-size: 18px;
+  }
+  .button #playPause {
+    margin: 0 14px;
+    font-size: 22px;
+    padding: 8px 12px;
+    border-radius: 40%;
+  }
+  .musicControls .slider input[type="range"] {
+    width: 66%;
+    height: 3px;
+    margin: 14px auto;
+  }
+  .volume .showVolume {
+    padding: 3px;
+  }
+  .volume .fas {
+    margin-right: 4px;
+  }
+  .volume input[type=range] {
+    width: 40%;
+}
 }
